@@ -1,0 +1,39 @@
+@import "__mixins";
+@import "__vars";
+
+.footer {
+    background: #333;
+    height: 270px;
+
+    &__content {
+
+        @include Flex();
+        padding-top: 110px;
+    }
+
+    &__title {
+        padding-bottom: 15px;
+        font-size: 28px;
+        font-family: $font_family_Josefin_Sans_Bold;
+    }
+
+    &__text {
+        padding-bottom: 25px;
+        letter-spacing: 1px;
+        font-family: $font_family_Josefin_Sans_Regular;
+    }
+
+    &__block {
+
+        @include FlexSpaceBetween();
+        width: 175px;
+    }
+}
+
+.fab:hover {
+    cursor: pointer;
+    -webkit-transform: scale(1.7);
+    -ms-transform: scale(1.7);
+    transform: scale(1.7);
+    color: #5270f0;
+}

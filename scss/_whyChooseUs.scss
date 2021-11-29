@@ -1,0 +1,122 @@
+@import "__mixins";
+@import "__vars";
+
+.whyChooseUs {
+    background: url(../img/background-whyChooseUs.png);
+    background-size: cover;
+    height: 693px;
+
+    @media screen and (max-width: 850px) {
+       height: auto;
+       padding-bottom: 50px;
+    }
+
+    &__container {
+        height: 100%;
+    }
+
+    &__content {
+        position: relative;
+        height: 100%;
+        @include FlexAlingItems();
+        font-family: $font_family_Aleo_Regular;
+        justify-content: space-between;
+
+        @media screen and (max-width: 850px) {
+            padding-top: 30px;
+            align-items: start;
+            flex-direction: column;
+            justify-content: initial;
+        }
+        
+    }
+
+    .text {
+        width: 50%;
+        max-width: 494px;
+
+        @media screen and (max-width: 850px) {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 auto;
+        }
+
+        @media screen and (max-width: 620px) {
+            width: 90%;
+        }
+
+        &__title {
+            margin-bottom: 40px;
+            font-size: 35px;
+        }
+
+        &__paragraph {
+            margin-bottom: 20px;
+            line-height: 23px;
+            font-family: $font_family_Josefin_Sans_Regular;
+        }
+
+        &__button {
+            padding: 15px 30px;
+            background-image: $background_image_linear_gradient;
+            border: 0;
+            color: white;
+            margin-top: 15px;
+            font-family: $font_family_Aleo_Regular;
+            font-size: 15px;
+            letter-spacing: 1px;
+            cursor: pointer;
+        }
+
+        &__button:hover {
+            background: #95796E;
+            transition: 0.3s;
+        }
+    }
+
+    &__img {
+        position: absolute;
+
+        &.lake {
+            top: 0;
+            left: 0;
+
+            @media screen and (max-width: 850px) {
+                width: 300px;
+                padding: 10px;
+                position: static;
+            }
+        }
+
+        &.burning {
+            right: 0;
+            bottom: 0;
+
+            @media screen and (max-width: 850px) {
+                width: 300px;
+                padding: 10px;
+                position: static;
+            }
+        }
+    }
+
+    &__gallery {
+        position: relative;
+        height: 448px;
+        width: 50%;
+
+        @media screen and (max-width: 850px) {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: space-around;
+            margin-top: 40px;
+        }
+
+        @media screen and (max-width: 620px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

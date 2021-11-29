@@ -1,0 +1,118 @@
+@import "__mixins";
+@import "__vars";
+
+.menu {
+    position: relative;
+    background-color: #5474fd;
+    height: 80px;
+    padding: 26px 0;
+
+    &__content {
+        
+        @include FlexAlingItems();
+        justify-content: space-between;
+        font-family: $font_family_Josefin_Sans_Bold;
+        letter-spacing: 3px;
+    }
+
+    &__title {
+        transform: translateY(4px);
+    }
+
+    &__img {
+
+       
+        display: none;
+
+        @media screen and (max-width: 850px) {
+            display: block;
+            display: inline-block;
+            width: 35px;
+            height: 3px;
+            vertical-align: middle;
+            border-radius: 5px;
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            // transform: translateY(-50%);
+            background-color: #fff;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: -9px;
+                width: 35px;
+                height: 3px;
+                background-color: #fff;
+                border-radius: 5px;
+            }
+
+            &::after {
+                top: 9px;
+            }
+        }
+    }
+
+    &__burger {
+        width: 37px;
+        height: 37px;
+        opacity: 0;
+        cursor: pointer;
+        z-index: 2;
+        position: absolute;
+        right: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+
+        &:checked ~ .menu__list{
+            display: block;
+            position: absolute;
+            right: 40px;
+            top: 64px;
+            z-index: 2;
+        }
+    }
+}
+
+.menu__list {
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+
+    .list__ul-menu {
+        
+        @include FlexSpaceBetween();
+        list-style: none;
+        font-size: 12px;
+        font-family: $font_family_Aleo_Regular;
+        letter-spacing: 1px;
+        font-size: 15px;
+
+        @media screen and (max-width: 850px) {
+            flex-direction: column;
+            cursor: pointer;
+        }
+    }
+
+    .item:hover {
+
+        @media screen and (max-width: 850px) {
+            color: #344D48;
+        }
+    }
+
+    li {
+
+        margin-left: 20px;
+
+        @media screen and (max-width: 850px) {
+            width: 100%;
+            padding: 10px;
+            text-align: center;
+            background-color: #041F39;
+            box-shadow: -1px -1px 2px 0 #ddffdd;
+        }
+    }
+}

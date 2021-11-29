@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "Josefin Sans Regular";
+    src: local("Josefin Sans Regular"),
+        url("../fonts/JosefinSans-Regular/JosefinSans-Regular.otf") format("otf"),
+        url("../fonts/JosefinSans-Regular/JosefinSans-Regular.ttf") format("ttf"),
+        url("../fonts/JosefinSans-Regular/JosefinSans-Regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Josefin Sans Bold";
+    src: local("Josefin Sans Bold"),
+        url("../fonts/JosefinSans-Bold/JosefinSans-Bold.otf") format("otf"),
+        url("../fonts/JosefinSans-Bold/JosefinSans-Bold.ttf") format("ttf"),
+        url("../fonts/JosefinSans-Bold/JosefinSans-Bold.woff") format("woff");
+}
+
+@font-face {
+    font-family: "Aleo Regular";
+    src: local("Aleo Regular"),
+        url("../fonts/Aleo-Regular/Aleo-Regular.otf") format("otf"),
+        url("../fonts/Aleo-Regular/Aleo-Regular.ttf") format("ttf"),
+        url("../fonts/Aleo-Regular/Aleo-Regular.woff") format("woff");
+}

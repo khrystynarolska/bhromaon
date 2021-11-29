@@ -1,0 +1,70 @@
+@import "__mixins";
+@import "__vars";
+
+.reviews {
+    background: url(../img/background-reviews.png) no-repeat;
+    background-size: cover;
+    height: 740px;
+    font-family: $font_family_Josefin_Sans_Regular;
+
+    @media screen and (max-width: 922px){
+        height: auto;
+        padding-bottom: 10px;
+    }
+
+    &__title {
+        text-align: center;
+        padding: 120px 0;
+        font-size: 40px;
+
+        @media screen and (max-width: 922px){
+            padding: 50px 0;
+        }
+    }
+
+    &__block {
+
+        @include FlexAlingItems();
+
+        @media screen and (max-width: 922px){
+            flex-direction: column;
+        }
+    }
+}
+
+.comment {
+    background: #252424e8;
+    height: 284px;
+    padding: 46px 50px;
+
+    @media screen and (max-width: 1013px){
+        padding: 32px 5px;
+    }
+
+    @media screen and (max-width: 922px){
+        height: auto;
+        padding: 46px 0px;
+    }
+
+    &__span {
+        font-size: 59px;
+        vertical-align: middle;
+        color: #5270f0;
+    }
+
+    &__name {
+        padding-bottom: 25px;
+        font-size: 20px;
+    }
+
+    &__text {
+        line-height: 25px;
+    }
+}
+
+img {
+
+    @media screen and (max-width: 922px){
+        max-width: 100%;
+    }
+}

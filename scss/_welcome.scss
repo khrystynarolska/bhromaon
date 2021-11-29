@@ -1,0 +1,149 @@
+@import "__mixins";
+@import "__vars";
+
+.welcome {
+    background: url(../img/background-welcome.png) no-repeat;
+    background-size: cover;
+    height: 740px;
+
+    &__content {
+
+        @include Flex();
+        padding-top: 240px;
+        font-family: $font_family_Josefin_Sans_Regular;
+
+        @media screen and (max-width: 500px){
+            padding-top: 160px;
+        }
+    }
+
+    &__title {
+        width: 330px;
+        font-size: 53px;
+        margin-bottom: 8px;
+        font-family: $font_family_Josefin_Sans_Bold;
+
+        @media screen and (max-width: 500px){
+            font-size: 41px;
+        }
+    }
+
+    &__text {
+        width: 330px;
+        font-size: 25px;
+        margin-bottom: 55px;
+        letter-spacing: 4px;
+
+        @media screen and (max-width: 500px){
+            font-size: 18px;
+        }
+    }
+
+    &__scroll {
+        color: #e1e6ea;
+
+        &.scr-text {
+            padding-top: 120px;
+            letter-spacing: 2px;
+
+            @media screen and (max-width: 500px){
+                font-size: 11px;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+    }
+}
+
+.search-wrapper {
+    @include FlexAlingItems();
+    width: 650px;
+    height: 66px;
+    background: #fff;
+    border: 2px solid #fff;
+    max-width: 100%;
+    // @media screen and (max-width: 500px){
+    //     height: 100%;   
+    // }
+}
+
+.welcome__search-wrapper {
+    @media screen and (max-width: 767px){
+        width: 90%;
+    }
+}
+
+.form {
+
+    &__input {
+        width: 75%;
+        height: 100%;
+        text-align: center;
+        border: 0;
+        letter-spacing: 2px;
+
+        @media screen and (max-width: 500px){
+            font-size: 11px;
+        }
+        @media screen and (max-width: 400px){
+            font-size: 7px;
+        }
+    }
+
+    &__input:focus {
+        background-color: #032447;
+        color: #fff;
+    }
+
+    &__button {
+        
+        @include FlexAlingItems();
+        justify-content: space-around;
+        outline: none;
+        padding: 0 20px;
+        background: #5474fd;
+        width: 25%;
+        height: 100%;
+        border: 0;
+        cursor: pointer;
+        color: white;
+        font-family: $font_family_Aleo_Regular;
+        font-size: 15px;
+        letter-spacing: 1px;
+
+        @media screen and (max-width: 767px){
+            width: 30%;
+        }
+        @media screen and (max-width: 500px){
+            font-size: 11px;
+        }
+    }
+
+    &__button:hover {
+        background-color: #032447;
+    }
+}
+
+.form {
+
+    &__img:hover {
+        -webkit-transform: scale(1.5);
+        -ms-transform: scale(1.5);
+        transform: scale(1.5);
+    }
+}
+
+.form {
+
+    &__img {
+
+        @media screen and (max-width: 500px){
+            width: 11px;
+            height: 12px;
+            display: block;
+            margin-left: 3px;
+        }
+    }
+}
